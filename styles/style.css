@@ -1,0 +1,442 @@
+body {
+    font-family: "Didact Gothic", sans-serif;
+    font-size: 19px;
+    color: #1C4587;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* S E C C I O N   H E A D E R ------------------------------------------------------------------------*/
+
+header {
+    display: grid;
+    grid-template-columns: 1.99fr 0.01fr;
+    align-items: center; 
+
+    background-color: #f4f4f4;
+    color: #1C4587;
+    text-align: center;
+    padding: 10px;
+}
+
+.header-container{
+    grid-row: span 2;
+}
+
+.logo-container img {
+    max-width: 30%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-right: 18px;
+    padding-bottom: 18px;
+}
+
+nav li:last-child {
+    margin-right: 0;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #1C4587;
+}
+
+.contador-contenedor{
+    width: 50px;
+    height: 60px;
+    background: url(/assets/carrito.png) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    margin-top: 30px;
+    cursor: pointer;
+    text-align: right;
+}
+
+.contador{
+    background-color: transparent;
+    color: #f4f4f4;
+    border-radius: 50%;
+    margin-top: 4px;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* I M A G E N  P R I N C I P A L ---------------------------------------------------------------------*/
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('/assets/estudiante_saludando.webp');
+    background-size: cover;
+    background-position: center;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Gotu", sans-serif;
+    font-size: 6em;
+    margin: auto;
+    margin: 235px 0 0;
+}
+
+.contactenos {
+    background-color: transparent;
+    color: #f4f4f4;
+    border: 2px solid #f4f4f4;
+    border-radius: 35px;
+    font-size: 20px;
+    padding: 22px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contactenos:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #f4f4f4;
+}
+
+/* S E C C I O N   D E S C R I P C I O N  -------------------------------------------------------------*/
+.description-container {
+    margin: 0 30px 0 30px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 0 20px;
+}
+
+h2 {
+    grid-column: span 2;
+    text-align: center;
+    font-family: "Gotu", sans-serif;
+    font-size: 4rem;
+    color: #1C4587;
+    margin: 50px 0 50px 0;
+}
+
+.description {
+    flex: 1.5;
+    padding: 0 30px 0 30px;
+    background-color: #1C4587;
+    color: #f4f4f4;
+    font-size: 24px;
+}
+
+.img-description {
+    flex: 1;
+}
+
+.img-description img {
+    width: 100%;
+    height: 100%;
+}
+
+/* S E C C I O N   C U R S O S ------------------------------------------------------------------------*/
+#cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.curso {
+    color: #1C4587;
+    width: 400px;
+    border: 3px solid #1C4587;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.curso:hover {
+    transform: scale(1.02);
+    border-color: #1C4587 !important;
+    box-shadow: 0 0 10px #1C4587;
+}
+
+.curso:hover h3,
+.curso:hover p {
+    color: #1C4587 !important;
+}
+
+button {
+    background-color: #1C4587;
+    color: #f4f4f4;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: auto;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3665A7;
+}
+
+/*SECCION ELEGIRNOS -----------------------------------------------------------------------------------*/
+.elegirnos-contenedor{
+    margin: 50px 30px 80px 30px
+}
+
+.elegirnos-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.elegirnos-img{
+    flex: 1;
+}
+
+.elegirnos-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.elegirnos-descripcion{
+    flex: 1.5;
+    padding: 0 30px 0 30px;
+    font-size: 24px;
+}
+
+/* F O O T E R ----------------------------------------------------------------------------------------*/
+footer {
+    background-color: #1C4587;
+    color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer div {
+    flex: 1 0 30%; 
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer h3{
+    margin-bottom: 0;
+}
+
+.logo-footer{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor-direccion{
+    flex-direction: row;
+}
+
+.contenedor-direccion img{
+    height: 25%;
+    padding-top: 15px;
+    padding-right: 5px;
+}
+
+.logo-footer img {
+    max-width: 100%;  
+}
+
+.iconos-contacto{
+  display: -webkit-inline-box;
+  margin: 0;
+}
+
+.iconos-contacto img{
+    width: 30px;
+    margin-top: 21px;
+}
+
+.en-linea{
+    margin-left: 8px;
+}
+
+/*D E S I N G --------------------------------------------------------------------------------------- */ 
+.design{
+    margin: 60px 0 20px 0;
+    text-align: center;
+}
+
+.design a{
+    color: #f4f4f4;
+}
+
+/* M E N S A J E S   A G R E G A R   C A R R I T O  - F I N A L I Z A R   C O M P R A  ----------------*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*P A G I N A   C A R R I T O -------------------------------------------------------------------------*/
+.contenedor-detalle-carrito{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.carrito-img {
+    flex: 1; 
+    background-color: #f4f4f4;
+    box-sizing: border-box
+}
+
+.img-carrito{
+    width: 100%;
+}
+
+.detalle-carrito{
+    flex: 2;
+    flex-direction: row;
+}
+
+.carrito{
+    padding-left: 30px;
+}
+
+#boton-finalizar-compra{
+    padding: 15px;
+    font-size: large;
+}
+
+/*P A G I N A   C O N T A C T E N O S -----------------------------------------------------------------*/
+
+.img-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    background-image: url('/assets/consultar.webp');
+    background-size: cover;
+    background-position: center;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+.formulario-contenedor{
+    border: 2px solid #1C4587;
+    margin: 20px;
+}
+
+.contacto-h3{
+    margin-left: 20px
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+/* Asegura que los elementos dentro de los formularios tengan el mismo ancho */
+.formulario label,
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 40%;
+    box-sizing: border-box;
+}
+
+.select-estilo {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #1C4587;
+    border-radius: 6px;
+    box-sizing: border-box;
+    appearance: none; /* Oculta la flecha de despliegue en algunos navegadores */
+    background-color: #f4f4f4;
+    color: #1C4587;
+    cursor: pointer;
+}
+
+.select-estilo:hover,
+.select-estilo:focus {
+    border-color: #3665A7;
+}
+
+/* Estilo para el botón */
+.btn-enviar {
+    width: 20%;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #1C4587;
+    color: #f4f4f4;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #3665A7;
+}

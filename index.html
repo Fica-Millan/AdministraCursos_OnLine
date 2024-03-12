@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos en línea</title>
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gotu&family=Didact+Gothic&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="./assets/Logo.webp" alt="Logo de AdministraCursos OnLine">
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="#cursos-disponibles">Cursos</a></li>
+                    <li><a href="#description">Que ofrecemos</a> </li>
+                    <li><a href="./pages/contactanos.html">Contactenos</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="contador-contenedor">
+            <a href="./pages/carrito.html"><span class="contador">0</span></a>
+        </div>
+
+    </header>
+
+    <main>
+        <section class="img-container">
+            <h1>AdministraCursos Online</h1>
+            <button class="contactenos" id="boton-contacto">Contactenos</button>
+        </section>
+
+        <section id="description" class="description-container">
+            <div class="grid-container">
+                <h2>Que ofrecemos</h2>
+
+                <div class="description">
+                    <p>AdministraCursos Online ofrece una amplia gama de cursos diseñados para impulsar tu desarrollo
+                        profesional y académico. Nuestros programas han permitido a muchos estudiantes avanzar en sus
+                        carreras y fortalecer sus conocimientos.</p>
+
+                    <p>Destacamos por métodos educativos innovadores y flexibles, permitiéndote aprender a tu propio
+                        ritmo. ¿Buscas mejorar habilidades específicas o adquirir nuevos conocimientos para sobresalir
+                        en tu industria? Estamos aquí para ayudarte a alcanzar tus metas.</p>
+
+                    <p>Explora nuestra oferta educativa en el sitio y descubre cómo podemos ser el impulso que necesitas
+                        en tu camino hacia el éxito. Si tienes preguntas o necesitas asistencia, ¡no dudes en
+                        contactarnos!</p>
+                </div>
+
+                <div class="img-description">
+                    <img src="./assets/meeting.webp" alt="Estudiante en una reunion on-line.">
+                </div>
+
+            </div>
+        </section>
+
+        <section id="cursos-disponibles">
+
+            <h2>Cursos disponibles</h2>
+
+            <div id="cursos">
+                <!-- Aca se muestran los cursos dinámicamente con JavaScript -->
+            </div>
+
+        </section>
+
+        <section class="elegirnos-contenedor">
+            <div class="elegirnos-grid">
+
+                <div class="elegirnos-img">
+                    <img src="./assets/estudiante_con_perro.webp"
+                        alt="Estudiante mirando una laptop y acariciando un peroo.">
+                </div>
+
+                <div class="elegirnos-descripcion">
+                    <h2 class="elegirnos">¿Por qué elegirnos?</h2>
+
+                    <ul>
+                        <li>Experiencia de aprendizaje virtual en tiempo real o a tu propio ritmo.</li>
+                        <li>Prácticas basadas en casos reales desde el primer día.</li>
+                        <li>No se requiere experiencia ni conocimientos previos.</li>
+                        <li>Recibe retroalimentación constante de nuestros docentes.</li>
+                        <li>Ofrecemos precios accesibles para que todos puedan aprender.</li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="logo-footer">
+            <img src="./assets/Logo-Footer.webp" alt="logo de AdministraCursos Online.">
+        </div>
+
+        <div>
+            <h3>Horarios de atención:</h3>
+            <p>Lunes a Viernes de 10 a 19 hs</p>
+
+            <h3>Oficina Central</h3>
+            <p>Av. Corrientes 763, 4º piso - CABA</p>
+        </div>
+
+        <div class="iconos">
+            <div class="iconos-contacto">
+                <img src="./assets/tubo.png" alt="Logo de un tubo de teléfono.">
+                <p class="en-linea">+54 11 5246-4512</p>
+            </div>
+
+            <div class="iconos-contacto">
+                <img src="./assets/Whatsaap.png" alt="Logo de whatsapp.">
+                <p class="en-linea">+54 911 3239-3460</p>
+            </div>
+
+            <div class="iconos-contacto">
+                <a href="mailto:capacitacion@administracursos-online.org">
+                    <img src="./assets/mail.png" alt="Logo de un sobre de email.">
+                </a>
+                <p class="en-linea">capacitacion@administracursos-online.org</p>
+            </div>
+        </div>
+    </footer>
+
+    <section class="design">
+        <p>Code & Design by FiCA</p>
+        <div>
+            <a href="https://www.linkedin.com/in/yesica-fica-millan/" target="_blank">
+                <img src="./assets/Linkedin.png" alt="Logo Linkedin">
+            </a>
+            <a href="https://github.com/Fica-Millan" target="_blank">
+                <img src="./assets/GitHub.png" alt="Logo GitHub">
+            </a>
+        </div>
+    </section>
+
+    <!-- PARA ESTILAR EL MENSAJE DESPUES DE AGREGAR AL CARRITO -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <p id="mensaje-modal"></p>
+        </div>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+
+</body>
+
+</html>

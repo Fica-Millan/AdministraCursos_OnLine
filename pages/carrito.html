@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Cursos en línea</title>
+    <link rel="stylesheet" href="/styles/style.css">
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gotu&family=Didact+Gothic&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="../assets/Logo.webp" alt="Logo de AdministraCursos OnLine">
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../index.html#cursos-disponibles">Cursos</a></li>
+                    <li><a href="../index.html#description">Que ofrecemos</a> </li>
+                    <li><a href="../pages/contactanos.html">Contactenos</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="contador-contenedor">
+            <a href="../pages/carrito.html"><span class="contador">0</span></a>
+        </div>
+
+    </header>
+
+    <main>
+        <section class="contenedor-detalle-carrito">
+            <div class="carrito-img">
+                <img class="img-carrito" src="../assets/calculadora.webp" alt="">
+            </div>
+            <div class="detalle-carrito">
+                <div class="carrito" id="carrito-contenedor">
+                    <!-- Aca se muestra el detalle del carrito dinámicamente con JavaScript -->
+                </div>
+                <button id="boton-finalizar-compra">Iniciar Compra</button>
+            </div>
+        </section>
+
+
+    </main>
+
+    </main>
+
+    <footer>
+        <div class="logo-footer">
+            <img src="../assets/Logo-Footer.webp" alt="logo de AdministraCursos Online.">
+        </div>
+        <div>
+            <h3>Horarios de atención:</h3>
+            <p>Lunes a Viernes de 10 a 19 hs</p>
+
+            <h3>Oficina Central</h3>
+            <p>Av. Corrientes 763, 4º piso - CABA</p>
+        </div>
+        <div class="iconos">
+            <div class="iconos-contacto">
+                <img src="../assets/tubo.png" alt="Logo de un tubo de teléfono.">
+                <p class="en-linea">+54 11 5246-4512</p>
+            </div>
+
+            <div class="iconos-contacto">
+                <img src="../assets/Whatsaap.png" alt="Logo de whatsapp.">
+                <p class="en-linea">+54 911 3239-3460</p>
+            </div>
+
+            <div class="iconos-contacto">
+                <img src="../assets/mail.png" alt="Logo de un sobre de email.">
+                <p class="en-linea">capacitacion@administracursos-online.org</p>
+            </div>
+        </div>
+    </footer>
+
+    <section class="design">
+        <p>Code & Design by FiCA</p>
+        <div>
+            <a href="https://www.linkedin.com/in/yesica-fica-millan/" target="_blank">
+                <img src="../assets/Linkedin.png" alt="Logo Linkedin">
+            </a>
+            <a href="https://github.com/Fica-Millan" target="_blank">
+                <img src="../assets/GitHub.png" alt="Logo GitHub">
+            </a>
+        </div>
+    </section>
+
+    <!-- PARA ESTILAR EL MENSAJE DESPUES DE LA COMPRA FINALIZADA -->
+    <div id="modal-finalizar-compra" class="modal">
+        <div class="modal-content">
+            <p id="mensaje-finalizar-compra">Página en construcción, pronto podrás adquirir nuestros cursos.
+                <br>Agradecemos tu paciencia y lamentamos cualquier inconveniente. <br><br>¡Estamos trabajando para
+                ofrecerte la mejor experiencia!</p>
+            <button onclick="cerrarModalFinalizarCompra()">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/carrito.js"></script>
+
+</body>
+
+</html>
