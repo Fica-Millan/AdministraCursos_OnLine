@@ -59,12 +59,18 @@ nav li a {
 .contador-contenedor{
     width: 50px;
     height: 60px;
-    background: url(/assets/carrito.png) no-repeat center center;
+    background: url(../assets/carrito.png) no-repeat center center;
     background-size: cover;
     position: relative;
     margin-top: 30px;
     cursor: pointer;
     text-align: right;
+}
+
+.contador-contenedor a{
+    display: inline-block;
+    width: 65px;
+    height: 65px;
 }
 
 .contador{
@@ -87,7 +93,7 @@ nav li a {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url('/assets/estudiante_saludando.webp');
+    background-image: url('../assets/estudiante_saludando.webp');
     background-size: cover;
     background-position: center;
     color: #f4f4f4;
@@ -362,6 +368,17 @@ footer h3{
 #boton-finalizar-compra{
     padding: 15px;
     font-size: large;
+    width: 150px;
+}
+
+#boton-vaciar-carrito{
+    padding: 15px;
+    font-size: large;
+    width: 150px;
+    background: #f4f4f4;
+    color: #1C4587;
+    border: 2px solid #1C4587;
+    border-radius: 6px;
 }
 
 /*P A G I N A   C O N T A C T E N O S -----------------------------------------------------------------*/

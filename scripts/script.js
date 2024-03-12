@@ -14,7 +14,6 @@ const cursos = [
     { id: 12, nombre: 'Planificación Estratégica', precio: 28000 },
 ];
 
-
 // FUNCION PARA MOSTRAR LOS CURSOS EN LA PAGINA ---------------------------------------------------------
 function mostrarCursos() {
     const cursosContenedor = document.getElementById('cursos');
@@ -33,10 +32,12 @@ function mostrarCursos() {
     cursosContenedor.append(...cursoElementos);
 }
 
-mostrarCursos(); // llamada a la funcion para mostrar lso cursos 
+if (window.location.href.includes("index")) {
+    mostrarCursos(); // llamada a la funcion para mostrar los cursos
+}
 
 // ACTUALIZAR EL NUMERO DENTRO DEL CARRITO DE COMPRAS Y LOCALSTORAGE-------------------------------------
-let contarItem = 0;
+let contarItem = JSON.parse(localStorage.getItem("carrito"))?.length || 0; //let contarItem = 0;
 
 function agregarCarrito() {
     contarItem++;
@@ -50,19 +51,19 @@ function actualizarContador() {
 
 function agregarAlCarrito(cursoId) {
     const cursoSeleccionado = cursos.find(curso => curso.id === cursoId);
-
+    
     if (cursoSeleccionado) {
         console.log(`Curso agregado al carrito: ${cursoSeleccionado.nombre}`);
-
+        
         //Obtener el carrito actual del localStorage
         const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-
+        
         //Agregar el nuevo curso al carrito
         carrito.push(cursoSeleccionado);
-
+        
         //Guardar el carrito actualizado en el localStorage
         localStorage.setItem('carrito', JSON.stringify(carrito));
-
+        
         agregarCarrito();
 
         mostrarModal(`Curso agregado al carrito: ${cursoSeleccionado.nombre}`);   
@@ -74,20 +75,24 @@ actualizarContador(); // actualiza el n° de elementos en el carrito
 agregarAlCarrito(); // guarda en el localStorage
 
 // REDIRIGIR A LA PAGINA CONTACTO
-document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('boton-contacto').addEventListener('click', function () {
-        window.location.href = './pages/contactanos.html';
+if (window.location.href.includes("index")) {
+    document.addEventListener("DOMContentLoaded", function () {
+      document
+        .getElementById("boton-contacto")
+        .addEventListener("click", function () {
+          window.location.href = "./pages/contactanos.html";
+        });
     });
-});
+}
 
 //FUNCION PARA MOSTRAR MENSAJE AL AGREGAR CURSO AL CARRITO
 function mostrarModal(mensaje) {
     const modal = document.getElementById('modal');
     const mensajeModal = document.getElementById('mensaje-modal');
-
+    
     mensajeModal.textContent = mensaje;
     modal.style.display = 'block';
-
+    
     // Cierra el mensaje después de 2 segundos
     setTimeout(() => {
         cerrarModal(); // Llamada a la funcion
@@ -98,3 +103,4 @@ function cerrarModal() {
     const modal = document.getElementById('modal');
     modal.style.display = 'none';
 }
+ 
