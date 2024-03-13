@@ -389,7 +389,7 @@ footer h3{
     align-items: center;
     justify-content: center;
     height: 50vh;
-    background-image: url('/assets/consultar.webp');
+    background-image: url('../assets/consultar.webp');
     background-size: cover;
     background-position: center;
     color: #f4f4f4;
