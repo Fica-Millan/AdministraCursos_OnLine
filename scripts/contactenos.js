@@ -2,8 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const formularioContacto = document.getElementById('formulario-contacto');
     const preferenciaSeleccion = document.getElementById('preferencias');
     const preferenciaHorario = document.getElementById('horario');
-    const modalConfirmacion = document.getElementById('modal-confirmacion');
-    const mensajeConfirmacion = document.getElementById('mensaje-confirmacion');
+    const mensajeConfirmacion = '¡Consulta enviada con éxito!\nNos pondremos en contacto pronto.';
 
     // Obtener consultas anteriores del localStorage o inicializar un array vacío
     const consultasAnteriores = JSON.parse(localStorage.getItem('consultas')) || [];
@@ -21,14 +20,18 @@ document.addEventListener('DOMContentLoaded', function () {
         // Guardar el array de consultas en el localStorage
         localStorage.setItem('consultas', JSON.stringify(consultasAnteriores));
 
-        // Configurar el mensaje en el modal
-        mensajeConfirmacion.textContent = '¡Consulta enviada con éxito! Nos pondremos en contacto pronto.';
-
-        // Mostrar el modal de confirmación
-        abrirModalConfirmacion();
+        Swal.fire({
+            icon: "success",
+            title: mensajeConfirmacion,
+            showConfirmButton: false,
+            timer: 2200
+        });
 
         // Limpia el formulario después de enviarlo
         formularioContacto.reset();
+
+        // Evitar la propagación del evento
+        event.stopPropagation();
     });
 
     // Opciones de preferencia de contacto
@@ -60,18 +63,4 @@ document.addEventListener('DOMContentLoaded', function () {
         opcionHorario.text = opcion.text;
         preferenciaHorario.appendChild(opcionHorario);
     });
-
-    // Función para abrir el modal de confirmación
-    function abrirModalConfirmacion() {
-        modalConfirmacion.style.display = 'block';
-
-        // Cerrar el modal después de 2 segundos
-        setTimeout(cerrarModalConfirmacion, 2000);
-    }
-
-    // Función para cerrar el modal de confirmación
-    function cerrarModalConfirmacion() {
-        modalConfirmacion.style.display = 'none';
-    }
-
 });

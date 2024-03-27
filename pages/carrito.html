@@ -34,7 +34,6 @@
         <div class="contador-contenedor">
             <a href="../pages/carrito.html"><span class="contador">0</span></a>
         </div>
-
     </header>
 
     <main>
@@ -42,25 +41,24 @@
             <div class="carrito-img">
                 <img class="img-carrito" src="../assets/calculadora.webp" alt="">
             </div>
+
             <div class="detalle-carrito">
                 <div class="carrito" id="carrito-contenedor">
                     <!-- Aca se muestra el detalle del carrito dinámicamente con JavaScript -->
                 </div>
-                <button id="boton-finalizar-compra">Iniciar Compra</button>
-                <button id="boton-vaciar-carrito">Vaciar Carrito</button>
 
+                <button id="boton-finalizar-compra">Iniciar Compra</button>
+
+                <button id="boton-vaciar-carrito">Vaciar Carrito</button>
             </div>
         </section>
-
-
-    </main>
-
     </main>
 
     <footer>
         <div class="logo-footer">
             <img src="../assets/Logo-Footer.webp" alt="logo de AdministraCursos Online.">
         </div>
+
         <div>
             <h3>Horarios de atención:</h3>
             <p>Lunes a Viernes de 10 a 19 hs</p>
@@ -68,6 +66,7 @@
             <h3>Oficina Central</h3>
             <p>Av. Corrientes 763, 4º piso - CABA</p>
         </div>
+
         <div class="iconos">
             <div class="iconos-contacto">
                 <img src="../assets/tubo.png" alt="Logo de un tubo de teléfono.">
@@ -88,10 +87,12 @@
 
     <section class="design">
         <p>Code & Design by FiCA</p>
+
         <div>
             <a href="https://www.linkedin.com/in/yesica-fica-millan/" target="_blank">
                 <img src="../assets/Linkedin.png" alt="Logo Linkedin">
             </a>
+
             <a href="https://github.com/Fica-Millan" target="_blank">
                 <img src="../assets/GitHub.png" alt="Logo GitHub">
             </a>
@@ -103,13 +104,16 @@
         <div class="modal-content">
             <p id="mensaje-finalizar-compra">Página en construcción, pronto podrás adquirir nuestros cursos.
                 <br>Agradecemos tu paciencia y lamentamos cualquier inconveniente. <br><br>¡Estamos trabajando para
-                ofrecerte la mejor experiencia!</p>
-            <button onclick="cerrarModalFinalizarCompra()">Cerrar</button>
+                ofrecerte la mejor experiencia!
+            </p>
+
+            <button id="boton-cerrar-modal">Cerrar</button>
         </div>
     </div>
 
-    <script src="../scripts/script.js"></script>
+    <script src="../scripts/main.js"></script>
     <script src="../scripts/carrito.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 

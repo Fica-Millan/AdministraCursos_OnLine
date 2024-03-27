@@ -43,25 +43,29 @@
         </section>
 
         <section class="formulario-container">
-            <h3 class="contacto-h3">Por favor complete el formulario para dejar su consulta o comentario.</h3>
+            <h3 class="contacto-h3">Por favor, complete el formulario para dejarnos su consulta o comentario.</h3>
 
             <form id="formulario-contacto" class="formulario-contenedor">
                 <div class="formulario">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required>
                 </div>
+
                 <div class="formulario">
                     <label for="apellido">Apellido:</label>
                     <input type="text" id="apellido" name="apellido" required>
                 </div>
+
                 <div class="formulario">
                     <label for="telefono">Telefono:</label>
                     <input type="text" id="telefono" name="telefono" required>
                 </div>
+
                 <div class="formulario">
                     <label for="email">Correo Electrónico:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
+
                 <div class="formulario">
                     <label for="preferencias">Preferencias de contacto:</label>
                     <select id="preferencias" name="preferencias" class="select-estilo" required>
@@ -69,6 +73,7 @@
                         <!-- Las opciones serán añadidas dinámicamente desde JavaScript -->
                     </select>
                 </div>
+
                 <div class="formulario">
                     <label for="horario">Horario preferente de contacto:</label>
                     <select id="horario" name="horario" class="select-estilo" required>
@@ -76,20 +81,23 @@
                         <!-- Las opciones serán añadidas dinámicamente desde JavaScript -->
                     </select>
                 </div>
+
                 <div class="formulario">
                     <label for="mensaje">Mensaje:</label>
                     <textarea id="mensaje" name="mensaje" rows="10" required></textarea>
                 </div>
+
                 <button type="submit" class="btn-enviar">Enviar Consulta</button>
+
             </form>
         </section>
-
     </main>
 
     <footer>
         <div class="logo-footer">
             <img src="../assets/Logo-Footer.webp" alt="logo de AdministraCursos Online.">
         </div>
+
         <div>
             <h3>Horarios de atención:</h3>
             <p>Lunes a Viernes de 10 a 19 hs</p>
@@ -97,6 +105,7 @@
             <h3>Oficina Central</h3>
             <p>Av. Corrientes 763, 4º piso - CABA</p>
         </div>
+
         <div class="iconos">
             <div class="iconos-contacto">
                 <img src="../assets/tubo.png" alt="Logo de un tubo de teléfono.">
@@ -117,6 +126,7 @@
 
     <section class="design">
         <p>Code & Design by FiCA</p>
+
         <div>
             <a href="https://www.linkedin.com/in/yesica-fica-millan/" target="_blank">
                 <img src="../assets/Linkedin.png" alt="Logo Linkedin">
@@ -127,15 +137,9 @@
         </div>
     </section>
 
-    <div id="modal-confirmacion" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="cerrarModalConfirmacion()">&times;</span>
-            <p id="mensaje-confirmacion"></p>
-        </div>
-    </div>
-
     <script src="../scripts/contactenos.js"></script>
-    <script src="../scripts/script.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 
