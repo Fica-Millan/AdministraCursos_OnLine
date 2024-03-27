@@ -235,8 +235,7 @@ button:hover {
     height: 100%;
 }
 
-.elegirnos-descripcion {
-    flex: 1.5;
+.elegirnos-descripcion ul{
     font-size: 24px;
 }
 
@@ -411,8 +410,9 @@ footer h3 {
     margin: 20px;
 }
 
-.contacto-h3 {
-    margin-left: 20px
+.contacto-p {
+    margin-left: 20px;
+    font-size: 2em;
 }
 
 .formulario {
