@@ -26,9 +26,37 @@ El desarrollo de AdministraCursos Online fue un proceso iterativo que involucró
 
 - Implementación de Funcionalidades: Progresivamente, fui implementando las diferentes funcionalidades de la plataforma, como la visualización de cursos, la gestión del carrito de compras y la navegación entre páginas.
 
-- Pruebas y Depuración: Realicé pruebas exhaustivas para garantizar que la aplicación funcionara correctamente en diferentes dispositivos y navegadores. También depuré errores y optimicé el rendimiento.
+- Pruebas y Depuración: Aun me encuentro realizando pruebas para garantizar que la aplicación funcionará correctamente en diferentes dispositivos y navegadores. También depuré errores y optimicé el rendimiento.
 
-- Despliegue y Publicación: Una vez que la aplicación estuvo completa y funcional, la desplegué en un servidor web para que estuviera disponible públicamente.
+### Guía de Uso
+
+1. **Instalación:**
+   Para instalar y ejecutar el proyecto, sigue estos pasos:
+
+   Es recomendable ejecutar el proyecto utilizando un servidor local como LiveServer para evitar posibles problemas de carga de datos desde el JSON.
+
+    ***Uso con LiveServer:***
+    Si estás utilizando Visual Studio Code u otro editor de código compatible, puedes instalar la extensión LiveServer para ejecutar el proyecto localmente. 
+
+    ***Uso desde GitHub:***
+    Puedes acceder al proyecto desde GitHub, pero ten en cuenta que debido a la carga de datos desde un archivo JSON, es posible que los cursos no se muestren correctamente a menos que accedas primero al carrito de compras dentro de la aplicación.
+
+2. **Cómo Empezar:**
+Una vez que el servidor esté en funcionamiento, abre tu navegador web y navega a la URL del proyecto.
+
+3. **Funcionalidades Disponibles:**
+   - Visualización de cursos disponibles.
+   - Agregar cursos al carrito de compras.
+   - Iniciar compra.
+
+4. **Ejemplos de Uso:**
+   - Para agregar un curso al carrito, haz clic en el botón "Agregar al carrito" junto al curso deseado.
+   - Para realizar el pago, ve al carrito de compras y haz clic en el botón "Iniciar Compra".
+
+5. **Notas Importante:**
+   - Esta página está actualmente en construcción y algunas características, incluido el diseño responsive, aún no están completas. El diseño puede no funcionar correctamente en todos los dispositivos y tamaños de pantalla.
+   - El proceso de pago también está pendiente de implementación y el botón de "Iniciar Compra" actualmente no dirigirá a ningún lado. Esta funcionalidad será agregada en futuras actualizaciones del proyecto. 
+
 
 # Conclusión
 
