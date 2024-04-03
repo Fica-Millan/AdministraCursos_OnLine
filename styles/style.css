@@ -34,19 +34,6 @@ nav {
     align-items: center;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav li {
-    margin-right: 18px;
-    padding-bottom: 18px;
-}
-
 nav li:last-child {
     margin-right: 0;
 }
@@ -54,6 +41,17 @@ nav li:last-child {
 nav li a {
     text-decoration: none;
     color: #1C4587;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin-right: 20px;
 }
 
 .contador-contenedor {
@@ -87,23 +85,32 @@ nav li a {
 
 
 /* I M A G E N  P R I N C I P A L --------------------------------------------------------------------------------------*/
-.img-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    background-image: url('../assets/estudiante_portada.webp');
-    background-size: cover;
-    background-position: center;
-    color: #FF934F;
+.contenedor-img-principal {
+    position: relative;
+    display: inline-block;
+}
+
+.img-principal {
+    width: 100vw;
+    height: auto;
+}
+
+.titulo-img-principal {
+    position: absolute;
+    top: 75%;
+    background: none;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 
 h1 {
     font-family: "Gotu", sans-serif;
-    font-size: 4em;
-    margin: 26% 0 0 0;
+    background: none;
+    color: #FF934F;
+    font-size: 3.5rem;
+    width: 100vw;
+    margin: 0;
 }
 
 .contactenos {
@@ -112,8 +119,7 @@ h1 {
     border: 2px solid #FF934F;
     border-radius: 35px;
     font-size: 1.5rem;
-    margin: 0 0 2% 0;
-    padding: 1em;
+    padding: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -123,6 +129,7 @@ h1 {
     border: 2px solid #FF934F;
 }
 
+
 /* S E C C I O N   D E S C R I P C I O N  ------------------------------------------------------------------------------*/
 .description-container {
     margin: 0 3% 0 3%;
@@ -130,8 +137,6 @@ h1 {
 
 .grid-container {
     display: grid;
-    /*grid-template-columns: 1.2fr 0.8fr;
-    gap: 0 20px;*/
 }
 
 h2 {
@@ -156,14 +161,10 @@ h2 {
     justify-content: center;
     align-items: center;
     height: 100%;
-
-    /*width: 400px;
-    height: auto;*/
 }
 
 .img-description img {
     max-width: 100%;
-    /*height: 100%;*/
     border-radius: 50%;
 }
 
@@ -227,18 +228,6 @@ button:hover {
     display: grid;
     grid-template-columns: 0.8fr 1fr;
 }
-
-/*.elegirnos-img {
-    width: 500px;
-    max-width: 100%;
-    height: auto;
-    mask-image: radial-gradient(circle 190px at 53% 51%, black 90%, transparent 90%);
-}
-
-.elegirnos-img img {
-    width: 100%;
-    height: 100%;
-}*/
 
 .elegirnos-descripcion ul {
     font-size: 1.3rem;
@@ -371,7 +360,7 @@ footer h3 {
 
 #total-carrito {
     font-weight: 900;
-    text-shadow: 1px 2px 3px #FF934F
+    text-shadow: 1px 2px 3px #888
 }
 
 #boton-finalizar-compra {
@@ -397,7 +386,6 @@ footer h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 50vh;
     background-image: url('../assets/consultar.webp');
     background-size: cover;
     background-position: center;
@@ -417,7 +405,7 @@ footer h3 {
 
 .contacto-p {
     margin-left: 20px;
-    font-size: 2em;
+    font-size: 2rem;
 }
 
 .formulario {
@@ -482,7 +470,18 @@ footer h3 {
 }
 
 
-/* Estilos para tabletas */
+/* M E D I A   Q U E R I E S */
+@media only screen and (max-width: 1010px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .contactenos {
+        font-size: 1.29rem;
+        padding: 0.86rem;
+    }
+}
+
 @media only screen and (max-width: 974px) {
 
     footer {
@@ -492,12 +491,88 @@ footer h3 {
     .logo-footer {
         align-items: baseline;
     }
+
+    .btn-enviar {
+        width: 30%;
+    }
 }
 
-/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 2.7rem;
+    }
+
+    .contactenos {
+        font-size: 1.07rem;
+        padding: 0.71rem;
+    }
+
+    .formulario label,
+    .formulario input,
+    .formulario select,
+    .formulario textarea {
+        width: 50%;
+    }
+}
+
 @media only screen and (max-width: 767px) {
     body {
         font-size: 17px;
+    }
+
+    .nav-menu ul {
+        display: none;
+    }
+
+    .nav-menu.active ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-menu.active ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle .hamburger {
+        width: 25px;
+        height: 20px;
+        margin: 5px 0;
+        transition: transform 0.4s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .menu-toggle .hamburger .line {
+        width: 100%;
+        height: 3px;
+        background-color: #1C4587;
+        transition: transform 0.4s;
+    }
+
+    .menu-toggle.active .hamburger:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-toggle.active .hamburger:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .hamburger:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 
     h2 {
@@ -509,13 +584,110 @@ footer h3 {
         display: block;
     }
 
+    .contacto-p {
+        font-size: 1.5rem;
+    }
 }
 
-/* Estilos para dispositivos más pequeños */
-@media only screen and (max-width: 622px) {
-
+@media only screen and (max-width: 640px) {
     h1 {
-        font-size: 2em;
+        font-size: 2rem;
     }
 
+    .contactenos {
+        font-size: 0.86rem;
+        padding: 0.57rem;
+    }
+
+    .contador-contenedor a {
+        width: 60px;
+        height: 60px;
+    }
+
+    .contador {
+        font-size: 13px;
+    }
+
+    .formulario label,
+    .formulario input,
+    .formulario select,
+    .formulario textarea {
+        width: 60%;
+    }
+
+    .btn-enviar {
+        width: 50%;
+    }
+
+    .carrito-img {
+        flex: 1.3;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .contactenos {
+        font-size: 0.64rem;
+        padding: 0.43rem;
+    }
+
+    .contador-contenedor a {
+        width: 55px;
+        height: 50px;
+    }
+
+    .contacto-p {
+        font-size: 1.1rem;
+    }
+
+    .formulario label,
+    .formulario input,
+    .formulario select,
+    .formulario textarea {
+        width: 70%;
+    }
+
+    .carrito-img {
+        flex: 1.5;
+    }
+
+    .carrito {
+        padding-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    .formulario label,
+    .formulario input,
+    .formulario select,
+    .formulario textarea {
+        width: 90%;
+    }
+
+    .btn-enviar {
+        width: 70%;
+    }
+
+    .contenedor-detalle-carrito {
+        display: block;
+    }
+
+    .img-carrito {
+        height: 100vw;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .contactenos {
+        font-size: 0.55rem;
+        padding: 0.35rem;
+    }
 }

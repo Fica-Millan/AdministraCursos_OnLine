@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Cursos en línea</title>
+
     <link rel="stylesheet" href="./styles/style.css">
 
     <!--GOOGLE FONTS-->
@@ -21,7 +23,16 @@
                 <img src="./assets/Logo.webp" alt="Logo de AdministraCursos OnLine">
             </div>
 
-            <nav>
+            <div class="menu-toggle">
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+
+
+            <nav class="nav-menu">
                 <ul>
                     <li><a href="./index.html">Inicio</a></li>
                     <li><a href="#cursos-disponibles">Cursos</a></li>
@@ -37,9 +48,12 @@
     </header>
 
     <main>
-        <section class="img-container">
-            <h1>AdministraCursos Online</h1>
-            <button class="contactenos" id="boton-contacto">Contactenos</button>
+        <section class="contenedor-img-principal">
+            <img class="img-principal" src="./assets/estudiante_portada.webp" alt="">
+            <div class="titulo-img-principal">
+                <h1>AdministraCursos Online</h1>
+                <button class="contactenos" id="boton-contacto">Contactenos</button>
+            </div>
         </section>
 
         <section id="description" class="description-container">
@@ -74,7 +88,7 @@
             </div>
         </section>
 
-        <section class="elegirnos-contenedor">
+        <section id=elegirnos class="elegirnos-contenedor">
             <div class="elegirnos-grid">
 
                 <div class="img-description">

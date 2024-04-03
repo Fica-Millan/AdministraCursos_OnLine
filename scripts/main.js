@@ -1,6 +1,6 @@
 // D A T O S   D E   L O S   C U R S O S  --------------------------------------------------------------------------------
 const cursos = [];
-const URL = 'scripts/cursos.json'
+const URL = './scripts/cursos.json'
 
 // Función para cargar los cursos en la página
 function cargarCursos() {
@@ -108,6 +108,19 @@ function agregarAlCarrito(cursoId) {
 actualizarContador(); // actualiza el n° de elementos en el carrito
 
 agregarAlCarrito(); // guarda en el localStorage
+
+
+// M E N U   H A M B U R G U E S A 
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    menuToggle.addEventListener('click', function () {
+        menuToggle.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+});
+
 
 
 // R E D I R I G I R   A   L A   P A G I N A   C O N T A C T O -----------------------------------------------------------

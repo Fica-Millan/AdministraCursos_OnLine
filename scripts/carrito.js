@@ -88,7 +88,7 @@ function mostrarModalFinalizarCompra() {
 document.addEventListener('DOMContentLoaded', function () {
     const botonCerrarModal = document.getElementById('boton-cerrar-modal');
 
-    botonCerrarModal.addEventListener('click', function() {
+    botonCerrarModal.addEventListener('click', function () {
         cerrarModalFinalizarCompra();
     });
 });
